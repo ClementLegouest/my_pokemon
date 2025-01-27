@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON</title>
+    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="shortcut icon" href="static/img/angel-stitch-hug.svg" type="image/x-icon">
+    <script defer src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Les pokémons et leurs mystères</h1>
+    </header>
+    <main>
+        <div class="card border-red">
+            <label for="red-pokemon-number">Numéro du Pokémon de Red :</label>
+            <input type="text" name="red-pokemon-number" id="red-pokemon-number" value="7">
+            <input type="button" value="envoyer">
+            <header class="card-header">
+                <img id="red-image" src="" alt="">
+                <h2 id="red-name"></h2>
+            </header>
+            <h2>PV</h2>
+            <p id="red-base-hp"></p>
+            <h2>Attaque de base</h2>
+            <p id="red-base-attack"></p>
+            <h2>Défense de base</h2>
+            <p id="red-base-defense"></p>
+            <h2>Attaque spéciale de base</h2>
+            <p id="red-base-special-attack"></p>
+            <h2>Défense spéciale de base</h2>
+            <p id="red-base-special-defense"></p>
+            <h2>Vitesse de base</h2>
+            <p id="red-base-speed"></p>
+        </div>
+        <div class="card border-green">
+            <header class="card-header">
+                <h1>Comparaison</h1>
+            </header>
+            <canvas id="comparison-chart"></canvas>
+        </div>
+        <div class="card border-blue">
+            <label for="red-pokemon-number">Numéro du Pokémon de Blue :</label>
+            <input type="text" name="blue-pokemon-number" id="blue-pokemon-number" value="4">
+            <input type="button" value="envoyer">
+            <header class="card-header">
+                <img id="blue-image" src="" alt="">
+                <h2 id="blue-name"></h2>
+            </header>
+            <h2>PV</h2>
+            <p id="blue-base-hp"></p>
+            <h2>Attaque de base</h2>
+            <p id="blue-base-attack"></p>
+            <h2>Défense de base</h2>
+            <p id="blue-base-defense"></p>
+            <h2>Attaque spéciale de base</h2>
+            <p id="blue-base-special-attack"></p>
+            <h2>Défense spéciale de base</h2>
+            <p id="blue-base-special-defense"></p>
+            <h2>Vitesse de base</h2>
+            <p id="blue-base-speed"></p>
+        </div>
+    </main>
+</body>
+</html>

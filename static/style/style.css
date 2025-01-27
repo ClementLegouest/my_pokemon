@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-header {
+    background: linear-gradient(red, blue);
+    color: blanchedalmond;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 30%;
+    padding: 1em;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.border-red {
+    border: solid red 2px;
+    border-radius: 5px;
+}
+
+.border-green {
+    border: solid green 2px;
+    border-radius: 5px;
+}
+
+.border-blue {
+    border: solid blue 2px;
+    border-radius: 5px;
+}
