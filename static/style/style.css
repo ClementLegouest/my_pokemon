@@ -4,6 +4,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Appliquer un style global aux canvas */
+canvas {
+    max-width: 100%; /* S'assurer que le canvas est responsive */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrer le graphique dans son conteneur */
+}
+
 .page-header {
     background: linear-gradient(red, blue);
     color: blanchedalmond;
@@ -14,6 +22,14 @@
 main {
     display: flex;
     justify-content: space-around;
+}
+
+/* Adapter la hauteur du conteneur principal pour ne pas écraser les éléments */
+main {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: flex-start; */
+    gap: 1em; /* Ajouter un espacement entre les cartes */
 }
 
 .card {
@@ -38,7 +54,100 @@ main {
     border-radius: 5px;
 }
 
+/* Adapter la carte verte pour le radar chart */
+.border-green {
+    border: solid green 2px;
+    border-radius: 5px;
+    padding: 1.5em; /* Ajouter un peu plus d'espace */
+    text-align: center; /* Centrer le contenu */
+    background-color: rgb(240, 255, 240); /* Ajouter un fond doux */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère */
+}
+
+/* Titres et styles spécifiques au radar chart */
+.border-green h1 {
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+    color: green; /* Mettre en valeur le titre */
+}
+
 .border-blue {
     border: solid blue 2px;
     border-radius: 5px;
+}
+
+/* Style de base pour les boîtes rouges et bleues */
+.border-red,
+.border-blue {
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 1.5em;
+    text-align: center;
+    background-color: #fff5f5; /* Fond doux */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+/* Rouge spécifique */
+.border-red {
+    border-color: red;
+    background-color: #ffe5e5; /* Fond légèrement rosé */
+}
+
+.border-red h2 {
+    color: red; /* Accent sur le rouge */
+}
+
+/* Bleu spécifique */
+.border-blue {
+    border-color: blue;
+    background-color: #e5f5ff; /* Fond légèrement bleu */
+}
+
+.border-blue h2 {
+    color: blue; /* Accent sur le bleu */
+}
+
+/* Ajout d'un espacement cohérent entre les sections */
+.card {
+    margin-bottom: 1em; /* Ajoute de l'espace entre les cartes */
+}
+
+/* Alignement des boutons et champs de texte */
+input[type="number"],
+input[type="button"] {
+    margin: 0.5em 0; /* Ajoute de l'espacement entre les champs */
+    padding: 0.5em;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Amélioration des boutons */
+input[type="button"] {
+    background-color: #f0f0f0;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type="button"]:hover {
+    background-color: #ddd;
+    transform: scale(1.05); /* Effet de zoom léger */
+}
+
+/* Alignement du contenu de la carte */
+.card-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Aligne le contenu verticalement */
+    gap: 0.5em; /* Ajoute un espacement entre les éléments */
+}
+
+/* Images des Pokémon */
+.card-header img {
+    max-width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -109,11 +109,23 @@ function updateRadarChart(pokemon1, pokemon2) {
 // Create a new XMLHttpRequest object
 var xhr = new XMLHttpRequest();
 
-document.querySelector("#red-pokemon-number + input[type='button']")
-.addEventListener('click', () => setPokemon('red'));
+document.querySelector("#red-select")
+.addEventListener('change', () => setPokemon('red'));
 
-document.querySelector("#blue-pokemon-number + input[type='button']")
-.addEventListener('click', () => setPokemon('blue'));
+document.querySelector("#blue-select")
+.addEventListener('change', () => setPokemon('blue'));
+
+var sel = document.getElementById('red-select');
+sel[0] = new Option( 'select pokemon', 4);
+for(var i = 1;i<1026;i++){
+    sel[i] = new Option( i,i);	
+}
+
+var sel = document.getElementById('blue-select');
+sel[0] = new Option( 'select pokemon', 7);
+for(var i = 1;i<1026;i++){
+    sel[i] = new Option( i,i);	
+}
 
 setPokemon('red');
 setPokemon('blue');
@@ -126,7 +138,8 @@ function getBaseStat(data, name) {
 
 // Fonction principale pour définir un Pokémon
 async function setPokemon(side) {
-  const pokemonNumber = document.getElementById(`${side}-pokemon-number`).value;
+  // const pokemonNumber = document.getElementById(`${side}-pokemon-number`).value;
+  const pokemonNumber = document.getElementById(`${side}-select`).value;
   try {
       const pokemon = await Pokemon.fetchPokemon(pokemonNumber);
       displayPokemon(side, pokemon);
