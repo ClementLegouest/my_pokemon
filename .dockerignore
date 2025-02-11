@@ -1,0 +1,12 @@
+# Ignorer les fichiers de configuration sensibles
+.env
+.env.local
+.env.*.local
+
+# Ignorer les fichiers liés à Git
+.git
+.gitignore
+
+# Ignorer Docker lui-même
+docker-compose.yml
+Dockerfile
